@@ -3,7 +3,7 @@ import { readable } from 'svelte/store';
 const RECIPE_EVENT = 'RECIPE';
 const RECIPE_PRINT = ':RECIPE_PRINT';
 const SET_RECIPE = ':SET_RECIPE';
-const isValidEvent = ({ data }) => data && data.messageType === RECIPE_PRINT;
+const isValidEvent = ({ data }) => data && data.messageType === RECIPE_EVENT;
 
 const handleOnmessage = (set) => {
 	return (e) => {
