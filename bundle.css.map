@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "../../App.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n\timport { recipe } from './store.js';\n</script>\n\n<main class=\"font_8\">\n\t<label class=\"owner\">MIKAELA REUBEN | RECIPES</label>\n\t<h3 class=\"title\">{$recipe.title}</h3>\n\t<div class=\"ingredients\">\n\t\t<h4>INGREDIENTS:</h4>\n\t\t<p>{$recipe.ingredients}</p>\n\t</div>\n\t<div class=\"directions\">\n\t\t<h4>DIRECTIONS:</h4>\n\t\t<p>{$recipe.directions}</p>\n\t</div>\n</main>\n\n<style>\n\tmain {\n  \tdisplay: none;\n\t\tmargin-top: 50px;\n\t\tpadding: 10%;\n\t\tgrid-template-columns: 10% repeat(3, 1fr);\n\t\tgap: 10px;\n\t}\n\t.owner {\n\t\tletter-spacing: 0.1;\n\t\tfont-size: 12px;\n\t\tgrid-column: 1/5;\n\t\tmargin-bottom: 30px\n\t}\n\t.title {\n\t\tgrid-column: 1/5;\n\t\tmargin-bottom: 45px;\n\t}\n\t.ingredients {\n\t\tgrid-column: 2/3;\n\t}\n\t.directions {\n\t\tgrid-column: 3/5;\n\t}\n\th4 {\n\t\tfont-size: 18px;\n\t\tmargin-block-end: 0;\n\t}\n\tp {\n\t\tpadding-block-start: 0.1em;\n\t}\n\t@media print {\n\t\t:global(body) {\n\t\t\tvisibility: hidden;\n\t\t}\n\t\tmain {\n\t\t\tdisplay: grid;\n\t\t\tvisibility: visible;\n\t\t\tposition: fixed;\n\t\t\ttop: 0;\n\t\t\tleft: 0;\n\t\t\tright: 0;\n\t\t\tbottom: 0;\n\t\t}\n\t}\n</style>\n"
+  ],
+  "names": [],
+  "mappings": "AAkBC,IAAI,eAAC,CAAC,AACJ,OAAO,CAAE,IAAI,CACd,UAAU,CAAE,IAAI,CAChB,OAAO,CAAE,GAAG,CACZ,qBAAqB,CAAE,GAAG,CAAC,OAAO,CAAC,CAAC,CAAC,GAAG,CAAC,CACzC,GAAG,CAAE,IAAI,AACV,CAAC,AACD,MAAM,eAAC,CAAC,AACP,cAAc,CAAE,GAAG,CACnB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,CAAC,CAAC,CAAC,CAChB,aAAa,CAAE,IAAI;CACpB,CAAC,AACD,MAAM,eAAC,CAAC,AACP,WAAW,CAAE,CAAC,CAAC,CAAC,CAChB,aAAa,CAAE,IAAI,AACpB,CAAC,AACD,YAAY,eAAC,CAAC,AACb,WAAW,CAAE,CAAC,CAAC,CAAC,AACjB,CAAC,AACD,WAAW,eAAC,CAAC,AACZ,WAAW,CAAE,CAAC,CAAC,CAAC,AACjB,CAAC,AACD,EAAE,eAAC,CAAC,AACH,SAAS,CAAE,IAAI,CACf,gBAAgB,CAAE,CAAC,AACpB,CAAC,AACD,CAAC,eAAC,CAAC,AACF,mBAAmB,CAAE,KAAK,AAC3B,CAAC,AACD,OAAO,KAAK,AAAC,CAAC,AACL,IAAI,AAAE,CAAC,AACd,UAAU,CAAE,MAAM,AACnB,CAAC,AACD,IAAI,eAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,UAAU,CAAE,OAAO,CACnB,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,CAAC,CACR,MAAM,CAAE,CAAC,AACV,CAAC,AACF,CAAC"
+}

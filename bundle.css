@@ -1,0 +1,4 @@
+main.svelte-1g2plkq{display:none;margin-top:50px;padding:10%;grid-template-columns:10% repeat(3, 1fr);gap:10px}.owner.svelte-1g2plkq{letter-spacing:0.1;font-size:12px;grid-column:1/5;margin-bottom:30px
+	}.title.svelte-1g2plkq{grid-column:1/5;margin-bottom:45px}.ingredients.svelte-1g2plkq{grid-column:2/3}.directions.svelte-1g2plkq{grid-column:3/5}h4.svelte-1g2plkq{font-size:18px;margin-block-end:0}p.svelte-1g2plkq{padding-block-start:0.1em}@media print{body{visibility:hidden}main.svelte-1g2plkq{display:grid;visibility:visible;position:fixed;top:0;left:0;right:0;bottom:0}}
+
+/*# sourceMappingURL=bundle.css.map */
