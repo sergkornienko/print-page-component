@@ -67,7 +67,30 @@ export default {
 
 		// If we're building for production (npm run build
 		// instead of npm run dev), minify
-		production && terser()
+		production && terser({
+      ecma: 8,
+      module: true,
+      toplevel: true,
+      parse: {
+        ecma: 8,
+      },
+      compress: {
+        ecma: 8,
+        warnings: false,
+        comparisons: false,
+        inline: 2,
+        drop_console: true,
+        passes: 3,
+        unsafe_methods: true,
+        module: true,
+        toplevel: true,
+        pure_getters: true,
+      },
+      output: {
+        ecma: 8,
+        comments: false,
+      },
+    })
 	],
 	watch: {
 		clearScreen: false
