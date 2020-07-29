@@ -1,18 +1,27 @@
 <script>
 	import { recipe } from './store.js';
+	console.log('app: ', $recipe);
 </script>
 
-<main class="font_8">
+<main>
 	<label class="owner">MIKAELA REUBEN | RECIPES</label>
 	<h3 class="title">{$recipe.title}</h3>
 	<div class="container">
 		<div class="ingredients">
-			<h4>INGREDIENTS:</h4>
-			<p>{$recipe.ingredients}</p>
+			<h4 class="font_4">INGREDIENTS:</h4>
+			<ul class="font_8">
+				{#each $recipe.ingredients as ing}
+					<li>{ing}</li>
+				{/each}
+			</ul>
 		</div>
 		<div class="directions">
-			<h4>DIRECTIONS:</h4>
-			<p>{$recipe.directions}</p>
+			<h4 class="font_4">DIRECTIONS:</h4>
+			<ul class="font_8">
+				{#each $recipe.directions as dir}
+					<li>{dir}</li>
+				{/each}
+			</ul>
 		</div>
 	</div>
 </main>
@@ -25,6 +34,7 @@
 	}
 	.container {
 		display: flex;
+		margin-top: 40px;
 		margin-left: 40px;
 	}
 	.owner {
@@ -34,6 +44,7 @@
 	}
 	.title {
 		margin-bottom: 45px;
+		margin-top: 30px;
 		font-size: 24px
 	}
 	.directions {
@@ -42,16 +53,23 @@
 	h4 {
 		font-size: 18px;
 	}
-	p {
-		padding-block-start: 0.1em;
+	ul {
+		list-style-type: none;
+		margin-top: 1em;
+		padding-inline-start: 0;
+	}
+	li {
+		margin: 1em 0;
 	}
 	@media print {
-		:global(body) {
-			visibility: hidden;
+		:global(body > *) {
+			display: none;
+		}
+		:global(print-page) {
+			display: block;
 		}
 		main {
 			display: block;
-			visibility: visible;
 			position: fixed;
 			top: 0;
 			left: 0;
