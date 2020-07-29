@@ -22,8 +22,8 @@ export const recipe = readable(initialRecipe, (set) => {
     if (isValidEvent(e) && e.data.type === SET_RECIPE) {
       const item = {
         title: e.data.recipe.title,
-        directions: e.data.recipe.directions.split(/↵|\n/g),
-        ingredients: e.data.recipe.ingredients.split(/↵|\n/g),
+        directions: (e.data.recipe.directions || '').split(/↵|\n/g),
+        ingredients: (e.data.recipe.ingredients || '').split(/↵|\n/g),
       }
       set(item);
     }
