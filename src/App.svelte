@@ -35,7 +35,6 @@
 	.container {
 		display: flex;
 		margin-top: 40px;
-		margin-left: 40px;
 	}
 	.owner {
 		letter-spacing: 0.1;
@@ -47,8 +46,11 @@
 		margin-top: 30px;
 		font-size: 24px
 	}
+	.ingredients {
+		max-width: 30%;
+	}
 	.directions {
-		margin-left: 15px;
+		margin-left: 10%;
 	}
 	h4 {
 		font-size: 18px;
@@ -57,6 +59,7 @@
 		list-style-type: none;
 		margin-top: 1em;
 		padding-inline-start: 0;
+		word-break: break-word;
 	}
 	li {
 		margin: 1em 0;
